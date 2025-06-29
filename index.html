@@ -3,35 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Avery Davis Bio</title>
+  <title>MAS DONN Bio</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d') no-repeat center center fixed;
-      background-size: cover;
+      background: #f9f5f2;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
     }
 
-    .card {
+    .container {
+      width: 100%;
+      max-width: 400px;
       background-color: #f9f5f2;
-      border-radius: 20px 20px 0 0;
-      width: 350px;
-      text-align: center;
-      padding: 30px 20px 0;
+      border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
     }
 
-    .card img.profile {
+    /* Background header custom */
+    .header-bg {
+      width: 100%;
+      height: 90px;
+      background: https://i.ibb.co/kVz2DYYQ/bg.jpg;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .card {
+      text-align: center;
+      padding: 130px 20px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-wrapper {
       width: 120px;
       height: 120px;
       border-radius: 50%;
+      margin: -125px auto 20px auto;
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 6px solid #f9f5f2;
+      z-index: 3;
+    }
+
+    .profile-wrapper img.profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
       object-fit: cover;
-      margin-top: -70px;
-      border: 4px solid #f9f5f2;
+      border: 3px solid #fff;
     }
 
     .card h2 {
@@ -76,7 +108,6 @@
       background-color: #333;
       color: #fff;
       padding: 20px;
-      border-radius: 0 0 20px 20px;
       text-align: left;
     }
 
@@ -89,14 +120,15 @@
       margin-right: 15px;
     }
 
-    .footer p {
-      font-size: 13px;
-      margin: 0 0 10px 0;
-    }
-
     .footer .username {
       font-weight: bold;
-      margin-top: 5px;
+      margin-top: 18px;
+    }
+
+    .footer p {
+      font-size: 13px;
+      margin: 10px 0;
+      clear: both;
     }
 
     .signature {
@@ -116,9 +148,13 @@
   </style>
 </head>
 <body>
-  <div>
+  <div class="container">
+    <div class="header-bg"></div>
+
     <div class="card">
-      <img src="https://i.ibb.co/MDvPDJ8W/donn.png" alt="Avery Davis" class="profile" />
+      <div class="profile-wrapper">
+        <img src="https://i.ibb.co/MDvPDJ8W/donn.png" alt="Avery Davis" class="profile" />
+      </div>
       <h2>MAS DONN</h2>
       <p class="followers">1.648 followers</p>
 
@@ -132,11 +168,10 @@
     <div class="footer" id="about">
       <img src="https://i.ibb.co/MDvPDJ8W/donn.png" alt=" " />
       <div class="username">@donn.4try</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa id eros volutpat vestibulum vitae id eros. Nullam eget feugiat lectus, in posuere metus. Aenean justo arcu, dictum vitae lobortis ut, molestie vitae lorem.</p>
-      <p>Etiam tincidunt massa orci, a gravida libero sagittis a. Etiam egestas sodales pretium. Mauris at lobortis massa.</p>
-      <p>Ut ac justo urna. Integer vel semper erat, eget molestie dolor. Curabitur eleifend vehicula malesuada.</p>
+      <p>"wong liyo ngerti what"</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac massa id eros volutpat vestibulum vitae id eros.</p>
       <div class="signature">Don4try</div>
-      <div class="footer-bottom">Official Biography | Copuright donn.4try</div>
+      <div class="footer-bottom">Official Biography | Copyright donn.4try</div>
     </div>
   </div>
 </body>
